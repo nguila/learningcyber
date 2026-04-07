@@ -80,6 +80,24 @@ export default function DigitalForensics() {
           ],
         },
       ]}
+      tools={[
+        { name: "Autopsy", url: "https://www.autopsy.com", desc: "Plataforma forense open-source para análise de disco" },
+        { name: "Volatility", url: "https://www.volatilityfoundation.org", desc: "Framework de análise de memória RAM" },
+        { name: "FTK Imager", url: "https://www.exterro.com/ftk-imager", desc: "Criação de imagens forenses de disco" },
+        { name: "KAPE", url: "https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape", desc: "Recolha rápida de artefactos forenses" },
+        { name: "Plaso / log2timeline", url: "https://plaso.readthedocs.io", desc: "Criação de timelines forenses a partir de múltiplas fontes" },
+      ]}
+      websites={[
+        { name: "SANS DFIR", url: "https://www.sans.org/digital-forensics-incident-response", desc: "Recursos e formação em forense digital" },
+        { name: "DFIR Training", url: "https://www.dfir.training", desc: "Recursos e ferramentas para investigação digital" },
+        { name: "13Cubed (YouTube)", url: "https://www.youtube.com/@13Cubed", desc: "Vídeos práticos de forense digital" },
+        { name: "AboutDFIR", url: "https://aboutdfir.com", desc: "Comunidade e recursos para profissionais DFIR" },
+      ]}
+      relatedAreas={[
+        { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
+        { title: "Threat Intelligence", url: "/threat-intelligence", desc: "Inteligência sobre atacantes" },
+        { title: "GRC", url: "/grc", desc: "Requisitos legais e conformidade" },
+      ]}
     />
   );
 }

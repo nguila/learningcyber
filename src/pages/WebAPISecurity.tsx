@@ -81,6 +81,23 @@ export default function WebAPISecurity() {
           ],
         },
       ]}
+      tools={[
+        { name: "Burp Suite", url: "https://portswigger.net/burp", desc: "Ferramenta de referência para testes web" },
+        { name: "OWASP ZAP", url: "https://www.zaproxy.org", desc: "Proxy de testes de segurança open-source" },
+        { name: "Postman", url: "https://www.postman.com", desc: "Teste e documentação de APIs" },
+        { name: "SQLMap", url: "https://sqlmap.org", desc: "Deteção automática de SQL Injection" },
+      ]}
+      websites={[
+        { name: "OWASP", url: "https://owasp.org", desc: "Comunidade global de segurança de aplicações" },
+        { name: "PortSwigger Web Academy", url: "https://portswigger.net/web-security", desc: "Laboratórios práticos de segurança web gratuitos" },
+        { name: "OWASP Juice Shop", url: "https://owasp.org/www-project-juice-shop", desc: "Aplicação web vulnerável para treino" },
+        { name: "HackTheBox", url: "https://www.hackthebox.com", desc: "Plataforma de treino com desafios web" },
+      ]}
+      relatedAreas={[
+        { title: "DevSecOps", url: "/devsecops", desc: "Segurança no ciclo de desenvolvimento" },
+        { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança autorizados" },
+        { title: "Mobile Security", url: "/mobile-security", desc: "Segurança em aplicações móveis" },
+      ]}
       ethicsNote="As vulnerabilidades web descritas aqui são apresentadas para fins educativos e defensivos. Nunca testes vulnerabilidades em sites ou sistemas sem autorização expressa do proprietário. Testar sem permissão é ilegal e antiético."
     />
   );

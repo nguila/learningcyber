@@ -94,6 +94,25 @@ export default function DevSecOps() {
           ],
         },
       ]}
+      tools={[
+        { name: "SonarQube", url: "https://www.sonarqube.org", desc: "Análise estática de código (SAST) com versão gratuita" },
+        { name: "Semgrep", url: "https://semgrep.dev", desc: "SAST rápido e open-source para múltiplas linguagens" },
+        { name: "Snyk", url: "https://snyk.io", desc: "SCA e segurança de dependências" },
+        { name: "Gitleaks", url: "https://gitleaks.io", desc: "Deteção de segredos em repositórios Git" },
+        { name: "HashiCorp Vault", url: "https://www.vaultproject.io", desc: "Gestão centralizada de segredos" },
+        { name: "OWASP ZAP", url: "https://www.zaproxy.org", desc: "Scanner DAST open-source" },
+      ]}
+      websites={[
+        { name: "OWASP DevSecOps Guideline", url: "https://owasp.org/www-project-devsecops-guideline", desc: "Guia oficial OWASP para DevSecOps" },
+        { name: "DevSecOps.org", url: "https://www.devsecops.org", desc: "Manifesto e recursos DevSecOps" },
+        { name: "GitHub Security Lab", url: "https://securitylab.github.com", desc: "Investigação e ferramentas de segurança" },
+        { name: "NIST SSDF", url: "https://csrc.nist.gov/Projects/ssdf", desc: "Framework de desenvolvimento seguro" },
+      ]}
+      relatedAreas={[
+        { title: "Web & API Security", url: "/web-api-security", desc: "Segurança em aplicações web" },
+        { title: "Cloud Security", url: "/cloud-security", desc: "Segurança em ambientes cloud" },
+        { title: "Vulnerability Management", url: "/vulnerability-management", desc: "Gestão contínua de vulnerabilidades" },
+      ]}
     />
   );
 }

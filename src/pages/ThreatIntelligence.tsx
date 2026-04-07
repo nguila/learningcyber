@@ -77,6 +77,25 @@ export default function ThreatIntelligence() {
           ],
         },
       ]}
+      tools={[
+        { name: "MITRE ATT&CK Navigator", url: "https://mitre-attack.github.io/attack-navigator", desc: "Ferramenta visual para mapear técnicas ATT&CK" },
+        { name: "Maltego", url: "https://www.maltego.com", desc: "Ferramenta OSINT para análise de relações e ligações" },
+        { name: "Shodan", url: "https://www.shodan.io", desc: "Motor de pesquisa para dispositivos ligados à internet" },
+        { name: "VirusTotal", url: "https://www.virustotal.com", desc: "Análise de ficheiros e URLs suspeitos" },
+        { name: "MISP", url: "https://www.misp-project.org", desc: "Plataforma open-source de partilha de inteligência" },
+      ]}
+      websites={[
+        { name: "MITRE ATT&CK", url: "https://attack.mitre.org", desc: "Base de dados de técnicas de ataque" },
+        { name: "AlienVault OTX", url: "https://otx.alienvault.com", desc: "Plataforma de partilha de indicadores de ameaças" },
+        { name: "Abuse.ch", url: "https://abuse.ch", desc: "Projeto de rastreio de malware e botnets" },
+        { name: "The DFIR Report", url: "https://thedfirreport.com", desc: "Relatórios detalhados de incidentes reais" },
+        { name: "Krebs on Security", url: "https://krebsonsecurity.com", desc: "Blog de referência sobre ciberameaças" },
+      ]}
+      relatedAreas={[
+        { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
+        { title: "Digital Forensics", url: "/digital-forensics", desc: "Investigação pós-incidente" },
+        { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança ofensivos" },
+      ]}
     />
   );
 }

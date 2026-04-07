@@ -78,6 +78,24 @@ export default function SOC() {
           ],
         },
       ]}
+      tools={[
+        { name: "Splunk", url: "https://www.splunk.com", desc: "SIEM líder de mercado com versão gratuita para aprendizagem" },
+        { name: "Elastic SIEM (ELK)", url: "https://www.elastic.co/security", desc: "SIEM open-source baseado em Elasticsearch" },
+        { name: "Wazuh", url: "https://wazuh.com", desc: "SIEM e XDR open-source gratuito" },
+        { name: "TheHive", url: "https://thehive-project.org", desc: "Plataforma open-source de resposta a incidentes" },
+        { name: "Velociraptor", url: "https://docs.velociraptor.app", desc: "Ferramenta de monitorização e resposta em endpoints" },
+      ]}
+      websites={[
+        { name: "LetsDefend", url: "https://letsdefend.io", desc: "Plataforma de treino SOC com simulações práticas" },
+        { name: "CyberDefenders", url: "https://cyberdefenders.org", desc: "Desafios Blue Team e análise de incidentes" },
+        { name: "SANS Reading Room", url: "https://www.sans.org/white-papers", desc: "Artigos técnicos sobre operações de segurança" },
+        { name: "Security Onion", url: "https://securityonionsolutions.com", desc: "Distribuição Linux para monitorização de segurança" },
+      ]}
+      relatedAreas={[
+        { title: "Threat Intelligence", url: "/threat-intelligence", desc: "Inteligência de ameaças para alimentar o SOC" },
+        { title: "Digital Forensics", url: "/digital-forensics", desc: "Investigação pós-incidente" },
+        { title: "Security Tools", url: "/security-tools", desc: "Ferramentas usadas diariamente no SOC" },
+      ]}
     />
   );
 }

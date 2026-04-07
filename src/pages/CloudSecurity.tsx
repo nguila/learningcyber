@@ -80,6 +80,23 @@ export default function CloudSecurity() {
           ],
         },
       ]}
+      tools={[
+        { name: "ScoutSuite", url: "https://github.com/nccgroup/ScoutSuite", desc: "Auditoria multi-cloud open-source" },
+        { name: "Prowler", url: "https://github.com/prowler-cloud/prowler", desc: "Ferramenta de avaliação de segurança AWS/Azure/GCP" },
+        { name: "Trivy", url: "https://trivy.dev", desc: "Scanner de vulnerabilidades para containers e IaC" },
+        { name: "Checkov", url: "https://www.checkov.io", desc: "Análise estática de Infrastructure as Code" },
+      ]}
+      websites={[
+        { name: "AWS Security Hub", url: "https://aws.amazon.com/security-hub", desc: "Central de segurança AWS" },
+        { name: "Cloud Security Alliance", url: "https://cloudsecurityalliance.org", desc: "Boas práticas de segurança cloud" },
+        { name: "Kubernetes Security", url: "https://kubernetes.io/docs/concepts/security", desc: "Documentação oficial de segurança K8s" },
+        { name: "A Cloud Guru", url: "https://acloudguru.com", desc: "Formação em cloud e segurança" },
+      ]}
+      relatedAreas={[
+        { title: "DevSecOps", url: "/devsecops", desc: "Segurança em pipelines de desenvolvimento" },
+        { title: "IoT Security", url: "/iot-security", desc: "Segurança de dispositivos conectados" },
+        { title: "GRC", url: "/grc", desc: "Conformidade e governança" },
+      ]}
     />
   );
 }

@@ -79,6 +79,23 @@ export default function Foundations() {
           ],
         },
       ]}
+      tools={[
+        { name: "Wireshark", url: "https://www.wireshark.org", desc: "Analisador de tráfego de rede gratuito e open-source" },
+        { name: "PuTTY", url: "https://www.putty.org", desc: "Cliente SSH/Telnet para Windows" },
+        { name: "VirtualBox", url: "https://www.virtualbox.org", desc: "Virtualização gratuita para testar SO sem risco" },
+        { name: "GNS3", url: "https://www.gns3.com", desc: "Simulador de redes para praticar configurações" },
+      ]}
+      websites={[
+        { name: "Professor Messer", url: "https://www.professormesser.com", desc: "Vídeos gratuitos de CompTIA Network+ e Security+" },
+        { name: "Cybrary", url: "https://www.cybrary.it", desc: "Plataforma de formação em cibersegurança" },
+        { name: "Khan Academy — Networking", url: "https://www.khanacademy.org/computing/computers-and-internet", desc: "Conceitos base de redes e internet" },
+        { name: "Linux Journey", url: "https://linuxjourney.com", desc: "Aprender Linux do zero, passo a passo" },
+      ]}
+      relatedAreas={[
+        { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
+        { title: "Security Tools", url: "/security-tools", desc: "Ferramentas essenciais da área" },
+        { title: "Cloud Security", url: "/cloud-security", desc: "Segurança em ambientes cloud" },
+      ]}
     />
   );
 }
