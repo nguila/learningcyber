@@ -36,11 +36,17 @@ const extraItems = [
 ];
 
 export function AppSidebar() {
-  const { state } = useSidebar();
+  const { state, isMobile, setOpenMobile } = useSidebar();
   const collapsed = state === "collapsed";
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const [stackOpen, setStackOpen] = useState(true);
+
+  const handleNavClick = () => {
+    if (isMobile) {
+      setOpenMobile(false);
+    }
+  };
 
   const renderItem = (item: typeof mainItems[0]) => (
     <SidebarMenuItem key={item.title}>
@@ -48,6 +54,7 @@ export function AppSidebar() {
         <NavLink
           to={item.url}
           end={item.url === "/"}
+          onClick={handleNavClick}
           className="flex items-center gap-3 px-3 py-2 rounded-md text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors text-sm"
           activeClassName="bg-sidebar-accent text-sidebar-primary font-medium"
         >
