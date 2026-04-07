@@ -54,9 +54,9 @@ export default function Home() {
               <Shield className="h-4 w-4 text-primary" />
               <span className="font-mono text-xs text-primary font-medium">Cybersecurity Stack Academy</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
               Entende o mundo da<br />
-              <span className="text-gradient">Cibersegurança</span>, passo a passo.
+              <span className="text-gradient drop-shadow-[0_0_20px_hsl(var(--primary)/0.5)]">Cibersegurança</span>, passo a passo.
             </h1>
             <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
               De iniciante a especialista — aprende conceitos, boas práticas e ferramentas de segurança digital com explicações simples e exemplos práticos.
