@@ -5,6 +5,7 @@ import {
   Scale, Wrench, Brain, GraduationCap, BookOpen, CheckCircle2,
   Lightbulb, ArrowRight, Zap
 } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const stackBlocks = [
   { title: "Foundations", desc: "Redes, SO, criptografia e princípios base", icon: Shield, url: "/foundations", color: "from-cyan-500/20 to-blue-500/10" },
