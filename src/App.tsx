@@ -3,8 +3,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Layout from "@/components/Layout";
+import Home from "./pages/Home";
+import Foundations from "./pages/Foundations";
+import SOC from "./pages/SOC";
+import ThreatIntelligence from "./pages/ThreatIntelligence";
+import VulnerabilityManagement from "./pages/VulnerabilityManagement";
+import WebAPISecurity from "./pages/WebAPISecurity";
+import Pentesting from "./pages/Pentesting";
+import CloudSecurity from "./pages/CloudSecurity";
+import DevSecOps from "./pages/DevSecOps";
+import DigitalForensics from "./pages/DigitalForensics";
+import GRC from "./pages/GRC";
+import SecurityTools from "./pages/SecurityTools";
+import AISecurity from "./pages/AISecurity";
+import Formacoes from "./pages/Formacoes";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -14,11 +28,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/foundations" element={<Foundations />} />
+            <Route path="/soc" element={<SOC />} />
+            <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
+            <Route path="/vulnerability-management" element={<VulnerabilityManagement />} />
+            <Route path="/web-api-security" element={<WebAPISecurity />} />
+            <Route path="/pentesting" element={<Pentesting />} />
+            <Route path="/cloud-security" element={<CloudSecurity />} />
+            <Route path="/devsecops" element={<DevSecOps />} />
+            <Route path="/digital-forensics" element={<DigitalForensics />} />
+            <Route path="/grc" element={<GRC />} />
+            <Route path="/security-tools" element={<SecurityTools />} />
+            <Route path="/ai-security" element={<AISecurity />} />
+            <Route path="/formacoes" element={<Formacoes />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
