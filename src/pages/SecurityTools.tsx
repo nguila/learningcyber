@@ -82,6 +82,23 @@ export default function SecurityTools() {
           ],
         },
       ]}
+      tools={[
+        { name: "Kali Linux", url: "https://www.kali.org", desc: "Distribuição Linux com centenas de ferramentas de segurança" },
+        { name: "CyberChef", url: "https://gchq.github.io/CyberChef", desc: "Ferramenta web para encoding, hashing e análise de dados" },
+        { name: "Ghidra", url: "https://ghidra-sre.org", desc: "Ferramenta de engenharia reversa da NSA (open-source)" },
+        { name: "theHarvester", url: "https://github.com/laramies/theHarvester", desc: "Recolha de emails, subdomínios e IPs" },
+      ]}
+      websites={[
+        { name: "Awesome Security", url: "https://github.com/sbilly/awesome-security", desc: "Lista curada de ferramentas e recursos de segurança" },
+        { name: "SecTools.org", url: "https://sectools.org", desc: "Top 125 ferramentas de segurança" },
+        { name: "OWASP Projects", url: "https://owasp.org/projects", desc: "Projetos open-source de segurança web" },
+        { name: "PacketStorm", url: "https://packetstormsecurity.com", desc: "Notícias, ferramentas e exploits de segurança" },
+      ]}
+      relatedAreas={[
+        { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança ofensivos" },
+        { title: "SOC", url: "/soc", desc: "Operações de segurança" },
+        { title: "DevSecOps", url: "/devsecops", desc: "Segurança no desenvolvimento" },
+      ]}
       ethicsNote="Todas as ferramentas apresentadas devem ser usadas exclusivamente para fins legítimos: testes autorizados, aprendizagem em ambientes controlados e defesa. Usar estas ferramentas contra sistemas sem autorização é ilegal e antiético. Plataformas como Hack The Box, TryHackMe e OWASP WebGoat oferecem ambientes seguros para praticar."
     />
   );

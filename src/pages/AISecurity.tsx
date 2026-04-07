@@ -82,6 +82,24 @@ export default function AISecurity() {
           ],
         },
       ]}
+      tools={[
+        { name: "OWASP LLM Top 10", url: "https://owasp.org/www-project-top-10-for-large-language-model-applications", desc: "Top 10 riscos de segurança para LLMs" },
+        { name: "Garak", url: "https://github.com/leondz/garak", desc: "Scanner de vulnerabilidades para LLMs" },
+        { name: "Rebuff", url: "https://github.com/protectai/rebuff", desc: "Deteção de prompt injection" },
+        { name: "AI Fairness 360", url: "https://aif360.mybluemix.net", desc: "Toolkit IBM para detetar bias em modelos de IA" },
+      ]}
+      websites={[
+        { name: "OWASP AI Security", url: "https://owasp.org/www-project-ai-security-and-privacy-guide", desc: "Guia de segurança e privacidade em IA" },
+        { name: "NIST AI Risk Framework", url: "https://airc.nist.gov/AI_RMF_Playbook", desc: "Framework de gestão de risco em IA" },
+        { name: "EU AI Act", url: "https://artificialintelligenceact.eu", desc: "Regulamento europeu de IA" },
+        { name: "Anthropic Research", url: "https://www.anthropic.com/research", desc: "Investigação sobre segurança de IA" },
+        { name: "AI Incident Database", url: "https://incidentdatabase.ai", desc: "Base de dados de incidentes reais com IA" },
+      ]}
+      relatedAreas={[
+        { title: "Privacy Engineering", url: "/privacy-engineering", desc: "Privacidade e proteção de dados" },
+        { title: "GRC", url: "/grc", desc: "Governança e conformidade (AI Act)" },
+        { title: "Web & API Security", url: "/web-api-security", desc: "Segurança de APIs de IA" },
+      ]}
     />
   );
 }

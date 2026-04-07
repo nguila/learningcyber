@@ -82,6 +82,24 @@ export default function GRC() {
           ],
         },
       ]}
+      tools={[
+        { name: "Vanta", url: "https://www.vanta.com", desc: "Automação de conformidade (SOC 2, ISO 27001)" },
+        { name: "Drata", url: "https://drata.com", desc: "Plataforma de conformidade contínua" },
+        { name: "OneTrust", url: "https://www.onetrust.com", desc: "Gestão de privacidade e conformidade RGPD" },
+        { name: "NIST CSF Tool", url: "https://www.nist.gov/cyberframework", desc: "Framework de cibersegurança do NIST" },
+      ]}
+      websites={[
+        { name: "CNPD", url: "https://www.cnpd.pt", desc: "Comissão Nacional de Proteção de Dados (Portugal)" },
+        { name: "ENISA", url: "https://www.enisa.europa.eu", desc: "Agência europeia de cibersegurança" },
+        { name: "CNCS", url: "https://www.cncs.gov.pt", desc: "Centro Nacional de Cibersegurança de Portugal" },
+        { name: "NIST Cybersecurity", url: "https://www.nist.gov/cybersecurity", desc: "Normas e frameworks de segurança dos EUA" },
+        { name: "ISACA", url: "https://www.isaca.org", desc: "Associação profissional de governança e auditoria TI" },
+      ]}
+      relatedAreas={[
+        { title: "Privacy Engineering", url: "/privacy-engineering", desc: "Privacidade por design e RGPD" },
+        { title: "Cloud Security", url: "/cloud-security", desc: "Conformidade em ambientes cloud" },
+        { title: "SOC", url: "/soc", desc: "Operações de segurança" },
+      ]}
     />
   );
 }
