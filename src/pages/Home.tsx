@@ -41,8 +41,8 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Hero */}
       <div className="relative overflow-hidden hero-gradient">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" width={1920} height={800} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" width={1920} height={800} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -54,9 +54,9 @@ export default function Home() {
               <Shield className="h-4 w-4 text-primary" />
               <span className="font-mono text-xs text-primary font-medium">Cybersecurity Stack Academy</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
               Entende o mundo da<br />
-              <span className="text-gradient">Cibersegurança</span>, passo a passo.
+              <span className="text-gradient drop-shadow-[0_0_20px_hsl(var(--primary)/0.5)]">Cibersegurança</span>, passo a passo.
             </h1>
             <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
               De iniciante a especialista — aprende conceitos, boas práticas e ferramentas de segurança digital com explicações simples e exemplos práticos.
