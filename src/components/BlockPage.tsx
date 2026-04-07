@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
-import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle } from "lucide-react";
+import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle, ExternalLink, Wrench as WrenchIcon, Globe, Compass } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+export interface ResourceLink {
+  name: string;
+  url: string;
+  desc: string;
+}
 
 export interface Subtopic {
   title: string;
@@ -21,10 +28,14 @@ interface BlockPageProps {
   connections: string;
   subtopics: Subtopic[];
   ethicsNote?: string;
+  tools?: ResourceLink[];
+  websites?: ResourceLink[];
+  relatedAreas?: { title: string; url: string; desc: string }[];
 }
 
 export default function BlockPage({
-  title, subtitle, icon: Icon, description, audience, connections, subtopics, ethicsNote
+  title, subtitle, icon: Icon, description, audience, connections, subtopics, ethicsNote,
+  tools, websites, relatedAreas
 }: BlockPageProps) {
   const [expanded, setExpanded] = useState<number | null>(null);
 
@@ -138,11 +149,102 @@ export default function BlockPage({
       </div>
 
       {ethicsNote && (
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-8">
           <div className="rounded-xl bg-destructive/5 border border-destructive/20 p-5">
             <h3 className="text-sm font-bold text-destructive mb-2">⚠️ Nota Ética</h3>
             <p className="text-sm text-muted-foreground">{ethicsNote}</p>
           </div>
+        </div>
+      )}
+
+      {/* Resources Section */}
+      {(tools || websites || relatedAreas) && (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-12 space-y-6">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+            <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+              <Compass className="h-6 w-6 text-primary" />
+              Recursos & Ferramentas Recomendadas
+            </h2>
+
+            {tools && tools.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <WrenchIcon className="h-4 w-4" />
+                  Ferramentas
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {tools.map((tool) => (
+                    <a
+                      key={tool.name}
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg bg-card cyber-border p-4 card-hover group flex items-start gap-3"
+                    >
+                      <WrenchIcon className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-1.5">
+                          <span className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{tool.name}</span>
+                          <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-0.5">{tool.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {websites && websites.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Globe className="h-4 w-4" />
+                  Sites & Referências
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {websites.map((site) => (
+                    <a
+                      key={site.name}
+                      href={site.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg bg-card cyber-border p-4 card-hover group flex items-start gap-3"
+                    >
+                      <Globe className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-1.5">
+                          <span className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{site.name}</span>
+                          <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-0.5">{site.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {relatedAreas && relatedAreas.length > 0 && (
+              <div>
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Compass className="h-4 w-4" />
+                  Áreas Relacionadas
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {relatedAreas.map((area) => (
+                    <Link
+                      key={area.title}
+                      to={area.url}
+                      className="rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 cyber-border p-4 card-hover group"
+                    >
+                      <span className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{area.title}</span>
+                      <p className="text-xs text-muted-foreground mt-0.5">{area.desc}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.div>
         </div>
       )}
     </div>
