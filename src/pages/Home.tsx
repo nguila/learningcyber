@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
   Scale, Wrench, Brain, GraduationCap, BookOpen, CheckCircle2,
-  Lightbulb, ArrowRight, Zap
+  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 

@@ -48,6 +48,10 @@ const App = () => (
             <Route path="/security-tools" element={<SecurityTools />} />
             <Route path="/ai-security" element={<AISecurity />} />
             <Route path="/formacoes" element={<Formacoes />} />
+            <Route path="/mobile-security" element={<MobileSecurity />} />
+            <Route path="/iot-security" element={<IoTSecurity />} />
+            <Route path="/red-blue-team" element={<RedBlueTeam />} />
+            <Route path="/privacy-engineering" element={<PrivacyEngineering />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
