@@ -26,6 +26,11 @@ export default function IoTSecurity() {
         { name: "ICS-CERT", url: "https://www.cisa.gov/topics/industrial-control-systems", desc: "Alertas de segurança para sistemas industriais" },
         { name: "IoT Security Foundation", url: "https://www.iotsecurityfoundation.org", desc: "Boas práticas de segurança IoT" },
       ]}
+      newsLinks={[
+        { title: "Shodan Blog — Dispositivos IoT expostos", url: "https://blog.shodan.io/", source: "Shodan" },
+        { title: "ICS-CERT Advisories", url: "https://www.cisa.gov/news-events/ics-advisories", source: "CISA" },
+        { title: "IoT Security News", url: "https://www.iotsecurityfoundation.org/news/", source: "IoT Security Foundation" },
+      ]}
       relatedAreas={[
         { title: "Cloud Security", url: "/cloud-security", desc: "Dados IoT na cloud" },
         { title: "Foundations", url: "/foundations", desc: "Redes e protocolos base" },
