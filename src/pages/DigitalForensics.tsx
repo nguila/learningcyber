@@ -93,6 +93,12 @@ export default function DigitalForensics() {
         { name: "13Cubed (YouTube)", url: "https://www.youtube.com/@13Cubed", desc: "Vídeos práticos de forense digital" },
         { name: "AboutDFIR", url: "https://aboutdfir.com", desc: "Comunidade e recursos para profissionais DFIR" },
       ]}
+      newsLinks={[
+        { title: "Forensic Focus — Notícias e artigos", url: "https://www.forensicfocus.com/", source: "Forensic Focus" },
+        { title: "DFIR Diva Blog", url: "https://dfirdiva.com/", source: "DFIR Diva" },
+        { title: "SANS DFIR Blog", url: "https://www.sans.org/blog/?focus-area=digital-forensics", source: "SANS" },
+        { title: "The DFIR Report", url: "https://thedfirreport.com/", source: "The DFIR Report" },
+      ]}
       relatedAreas={[
         { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
         { title: "Threat Intelligence", url: "/threat-intelligence", desc: "Inteligência sobre atacantes" },

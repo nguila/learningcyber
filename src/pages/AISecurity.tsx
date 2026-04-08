@@ -95,6 +95,13 @@ export default function AISecurity() {
         { name: "Anthropic Research", url: "https://www.anthropic.com/research", desc: "Investigação sobre segurança de IA" },
         { name: "AI Incident Database", url: "https://incidentdatabase.ai", desc: "Base de dados de incidentes reais com IA" },
       ]}
+      newsLinks={[
+        { title: "AI Incident Database — Incidentes reais com IA", url: "https://incidentdatabase.ai/", source: "AI Incident DB" },
+        { title: "Anthropic Research — Segurança de IA", url: "https://www.anthropic.com/research", source: "Anthropic" },
+        { title: "OWASP LLM Top 10 Updates", url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/", source: "OWASP" },
+        { title: "EU AI Act — Regulamentação europeia", url: "https://artificialintelligenceact.eu/", source: "EU AI Act" },
+        { title: "Simon Willison's Blog — LLM Security", url: "https://simonwillison.net/", source: "Simon Willison" },
+      ]}
       relatedAreas={[
         { title: "Privacy Engineering", url: "/privacy-engineering", desc: "Privacidade e proteção de dados" },
         { title: "GRC", url: "/grc", desc: "Governança e conformidade (AI Act)" },

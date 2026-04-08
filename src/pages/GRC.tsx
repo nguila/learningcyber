@@ -95,6 +95,12 @@ export default function GRC() {
         { name: "NIST Cybersecurity", url: "https://www.nist.gov/cybersecurity", desc: "Normas e frameworks de segurança dos EUA" },
         { name: "ISACA", url: "https://www.isaca.org", desc: "Associação profissional de governança e auditoria TI" },
       ]}
+      newsLinks={[
+        { title: "CNCS — Alertas de segurança Portugal", url: "https://www.cncs.gov.pt/", source: "CNCS" },
+        { title: "ENISA News — Cibersegurança europeia", url: "https://www.enisa.europa.eu/news", source: "ENISA" },
+        { title: "ISACA Now Blog", url: "https://www.isaca.org/resources/isaca-journal", source: "ISACA" },
+        { title: "CNPD — Deliberações e orientações", url: "https://www.cnpd.pt/", source: "CNPD" },
+      ]}
       relatedAreas={[
         { title: "Privacy Engineering", url: "/privacy-engineering", desc: "Privacidade por design e RGPD" },
         { title: "Cloud Security", url: "/cloud-security", desc: "Conformidade em ambientes cloud" },

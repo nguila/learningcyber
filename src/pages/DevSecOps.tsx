@@ -108,6 +108,12 @@ export default function DevSecOps() {
         { name: "GitHub Security Lab", url: "https://securitylab.github.com", desc: "Investigação e ferramentas de segurança" },
         { name: "NIST SSDF", url: "https://csrc.nist.gov/Projects/ssdf", desc: "Framework de desenvolvimento seguro" },
       ]}
+      newsLinks={[
+        { title: "GitHub Security Blog", url: "https://github.blog/security/", source: "GitHub" },
+        { title: "Snyk Blog — DevSecOps insights", url: "https://snyk.io/blog/", source: "Snyk" },
+        { title: "OWASP DevSecOps updates", url: "https://owasp.org/www-project-devsecops-guideline/", source: "OWASP" },
+        { title: "GitLab Security Blog", url: "https://about.gitlab.com/blog/categories/security/", source: "GitLab" },
+      ]}
       relatedAreas={[
         { title: "Web & API Security", url: "/web-api-security", desc: "Segurança em aplicações web" },
         { title: "Cloud Security", url: "/cloud-security", desc: "Segurança em ambientes cloud" },
