@@ -91,6 +91,14 @@ export default function Foundations() {
         { name: "Khan Academy — Networking", url: "https://www.khanacademy.org/computing/computers-and-internet", desc: "Conceitos base de redes e internet" },
         { name: "Linux Journey", url: "https://linuxjourney.com", desc: "Aprender Linux do zero, passo a passo" },
       ]}
+      newsLinks={[
+        { title: "OWASP Top 10 — As vulnerabilidades mais críticas", url: "https://owasp.org/www-project-top-ten/", source: "OWASP" },
+        { title: "Krebs on Security — Blog de referência", url: "https://krebsonsecurity.com/", source: "Krebs on Security" },
+        { title: "The Hacker News — Notícias diárias", url: "https://thehackernews.com/", source: "The Hacker News" },
+        { title: "SANS Internet Storm Center", url: "https://isc.sans.edu/", source: "SANS ISC" },
+        { title: "CIS Controls — Boas práticas de segurança", url: "https://www.cisecurity.org/controls", source: "CIS" },
+        { title: "Darknet Diaries — Podcast de cibersegurança", url: "https://darknetdiaries.com/", source: "Darknet Diaries" },
+      ]}
       relatedAreas={[
         { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
         { title: "Security Tools", url: "/security-tools", desc: "Ferramentas essenciais da área" },
