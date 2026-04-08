@@ -20,6 +20,10 @@ const stackBlocks = [
   { title: "GRC", desc: "Governança, risco e conformidade", icon: Scale, url: "/grc", color: "from-indigo-500/20 to-purple-500/10" },
   { title: "Security Tools", desc: "Ferramentas essenciais da área", icon: Wrench, url: "/security-tools", color: "from-slate-500/20 to-gray-500/10" },
   { title: "AI Security", desc: "Proteger sistemas com IA/LLM", icon: Brain, url: "/ai-security", color: "from-pink-500/20 to-rose-500/10" },
+  { title: "Mobile Security", desc: "Segurança em apps e dispositivos móveis", icon: Smartphone, url: "/mobile-security", color: "from-violet-500/20 to-purple-500/10" },
+  { title: "IoT Security", desc: "Proteger dispositivos conectados", icon: Wifi, url: "/iot-security", color: "from-teal-500/20 to-cyan-500/10" },
+  { title: "Red/Blue Team", desc: "Simulação de ataque e defesa", icon: Swords, url: "/red-blue-team", color: "from-red-500/20 to-blue-500/10" },
+  { title: "Privacy Engineering", desc: "Engenharia de privacidade e RGPD", icon: Lock, url: "/privacy-engineering", color: "from-fuchsia-500/20 to-pink-500/10" },
 ];
 
 const helpCards = [
