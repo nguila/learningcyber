@@ -92,6 +92,13 @@ export default function CloudSecurity() {
         { name: "Kubernetes Security", url: "https://kubernetes.io/docs/concepts/security", desc: "Documentação oficial de segurança K8s" },
         { name: "A Cloud Guru", url: "https://acloudguru.com", desc: "Formação em cloud e segurança" },
       ]}
+      newsLinks={[
+        { title: "Wiz Blog — Investigação em cloud security", url: "https://www.wiz.io/blog", source: "Wiz" },
+        { title: "Datadog Security Labs", url: "https://securitylabs.datadoghq.com/", source: "Datadog" },
+        { title: "AWS Security Blog", url: "https://aws.amazon.com/blogs/security/", source: "AWS" },
+        { title: "Google Cloud Security Blog", url: "https://cloud.google.com/blog/products/identity-security", source: "Google Cloud" },
+        { title: "Sysdig Cloud Security Report", url: "https://sysdig.com/resources/reports/", source: "Sysdig" },
+      ]}
       relatedAreas={[
         { title: "DevSecOps", url: "/devsecops", desc: "Segurança em pipelines de desenvolvimento" },
         { title: "IoT Security", url: "/iot-security", desc: "Segurança de dispositivos conectados" },

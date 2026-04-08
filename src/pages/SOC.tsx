@@ -91,6 +91,14 @@ export default function SOC() {
         { name: "SANS Reading Room", url: "https://www.sans.org/white-papers", desc: "Artigos técnicos sobre operações de segurança" },
         { name: "Security Onion", url: "https://securityonionsolutions.com", desc: "Distribuição Linux para monitorização de segurança" },
       ]}
+      newsLinks={[
+        { title: "BleepingComputer — Notícias de ameaças e incidentes", url: "https://www.bleepingcomputer.com/", source: "BleepingComputer" },
+        { title: "The DFIR Report — Análises detalhadas de incidentes", url: "https://thedfirreport.com/", source: "The DFIR Report" },
+        { title: "SANS SOC Newsletter", url: "https://www.sans.org/newsletters/", source: "SANS" },
+        { title: "Splunk Blog — Deteção e resposta", url: "https://www.splunk.com/en_us/blog/security.html", source: "Splunk" },
+        { title: "Elastic Security Labs", url: "https://www.elastic.co/security-labs", source: "Elastic" },
+        { title: "SOC Investigation — Playbooks práticos", url: "https://www.socinvestigation.com/", source: "SOC Investigation" },
+      ]}
       relatedAreas={[
         { title: "Threat Intelligence", url: "/threat-intelligence", desc: "Inteligência de ameaças para alimentar o SOC" },
         { title: "Digital Forensics", url: "/digital-forensics", desc: "Investigação pós-incidente" },

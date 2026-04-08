@@ -91,6 +91,13 @@ export default function ThreatIntelligence() {
         { name: "The DFIR Report", url: "https://thedfirreport.com", desc: "Relatórios detalhados de incidentes reais" },
         { name: "Krebs on Security", url: "https://krebsonsecurity.com", desc: "Blog de referência sobre ciberameaças" },
       ]}
+      newsLinks={[
+        { title: "Mandiant Blog — Investigações de APTs", url: "https://www.mandiant.com/resources/blog", source: "Mandiant" },
+        { title: "Recorded Future Blog", url: "https://www.recordedfuture.com/blog", source: "Recorded Future" },
+        { title: "CISA Alerts — Alertas do governo dos EUA", url: "https://www.cisa.gov/news-events/cybersecurity-advisories", source: "CISA" },
+        { title: "Threat Intelligence Feeds (abuse.ch)", url: "https://abuse.ch/", source: "abuse.ch" },
+        { title: "ATT&CK Updates — Novas técnicas e grupos", url: "https://attack.mitre.org/resources/updates/", source: "MITRE" },
+      ]}
       relatedAreas={[
         { title: "SOC", url: "/soc", desc: "Monitorização e resposta a incidentes" },
         { title: "Digital Forensics", url: "/digital-forensics", desc: "Investigação pós-incidente" },

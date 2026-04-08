@@ -93,6 +93,13 @@ export default function WebAPISecurity() {
         { name: "OWASP Juice Shop", url: "https://owasp.org/www-project-juice-shop", desc: "Aplicação web vulnerável para treino" },
         { name: "HackTheBox", url: "https://www.hackthebox.com", desc: "Plataforma de treino com desafios web" },
       ]}
+      newsLinks={[
+        { title: "PortSwigger Daily Swig — Notícias de segurança web", url: "https://portswigger.net/daily-swig", source: "PortSwigger" },
+        { title: "OWASP Blog", url: "https://owasp.org/blog/", source: "OWASP" },
+        { title: "Snyk Security Blog", url: "https://snyk.io/blog/", source: "Snyk" },
+        { title: "HackerOne Reports — Vulnerabilidades divulgadas", url: "https://hackerone.com/hacktivity", source: "HackerOne" },
+        { title: "API Security Newsletter", url: "https://apisecurity.io/", source: "APIsecurity.io" },
+      ]}
       relatedAreas={[
         { title: "DevSecOps", url: "/devsecops", desc: "Segurança no ciclo de desenvolvimento" },
         { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança autorizados" },

@@ -28,6 +28,12 @@ export default function PrivacyEngineering() {
         { name: "GDPR.eu", url: "https://gdpr.eu", desc: "Guia acessível do RGPD" },
         { name: "NOYB", url: "https://noyb.eu", desc: "Organização europeia de defesa de direitos digitais" },
       ]}
+      newsLinks={[
+        { title: "IAPP Privacy News", url: "https://iapp.org/news/", source: "IAPP" },
+        { title: "NOYB — Casos de proteção de dados", url: "https://noyb.eu/en/news", source: "NOYB" },
+        { title: "EDPB Guidelines", url: "https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en", source: "EDPB" },
+        { title: "CNPD — Deliberações recentes", url: "https://www.cnpd.pt/decisoes/deliberacoes/", source: "CNPD" },
+      ]}
       relatedAreas={[
         { title: "GRC", url: "/grc", desc: "Governança e conformidade" },
         { title: "AI Security", url: "/ai-security", desc: "Privacidade em sistemas de IA" },

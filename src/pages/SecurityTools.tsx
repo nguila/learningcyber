@@ -94,6 +94,12 @@ export default function SecurityTools() {
         { name: "OWASP Projects", url: "https://owasp.org/projects", desc: "Projetos open-source de segurança web" },
         { name: "PacketStorm", url: "https://packetstormsecurity.com", desc: "Notícias, ferramentas e exploits de segurança" },
       ]}
+      newsLinks={[
+        { title: "Kali Linux Blog — Novas ferramentas", url: "https://www.kali.org/blog/", source: "Kali Linux" },
+        { title: "PacketStorm Security", url: "https://packetstormsecurity.com/", source: "PacketStorm" },
+        { title: "ToolsWatch — Novas ferramentas de segurança", url: "https://www.toolswatch.org/", source: "ToolsWatch" },
+        { title: "Kitploit — Ferramentas para pentesters", url: "https://www.kitploit.com/", source: "Kitploit" },
+      ]}
       relatedAreas={[
         { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança ofensivos" },
         { title: "SOC", url: "/soc", desc: "Operações de segurança" },

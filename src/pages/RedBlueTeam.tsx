@@ -27,6 +27,12 @@ export default function RedBlueTeam() {
         { name: "Hack The Box", url: "https://www.hackthebox.com", desc: "Desafios práticos de segurança" },
         { name: "SANS Purple Team", url: "https://www.sans.org/purple-team", desc: "Recursos e formação Purple Team" },
       ]}
+      newsLinks={[
+        { title: "Red Canary Blog — Deteção de ameaças", url: "https://redcanary.com/blog/", source: "Red Canary" },
+        { title: "SpecterOps Blog — Red Team research", url: "https://posts.specterops.io/", source: "SpecterOps" },
+        { title: "CTFtime — Competições ativas", url: "https://ctftime.org/", source: "CTFtime" },
+        { title: "MITRE ATT&CK Blog", url: "https://medium.com/mitre-attack", source: "MITRE" },
+      ]}
       relatedAreas={[
         { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança ofensivos" },
         { title: "SOC", url: "/soc", desc: "Operações de defesa" },

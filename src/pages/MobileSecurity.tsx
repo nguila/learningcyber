@@ -25,6 +25,11 @@ export default function MobileSecurity() {
         { name: "OWASP Mobile", url: "https://owasp.org/www-project-mobile-top-10", desc: "Top 10 riscos de segurança móvel" },
         { name: "Mobile Security Testing Guide", url: "https://mas.owasp.org", desc: "Guia OWASP de testes de segurança móvel" },
       ]}
+      newsLinks={[
+        { title: "Mobile Security Blog — Lookout", url: "https://www.lookout.com/blog", source: "Lookout" },
+        { title: "Android Security Bulletins", url: "https://source.android.com/docs/security/bulletin", source: "Google" },
+        { title: "Apple Security Updates", url: "https://support.apple.com/en-us/100100", source: "Apple" },
+      ]}
       relatedAreas={[
         { title: "Web & API Security", url: "/web-api-security", desc: "APIs usadas por apps móveis" },
         { title: "Privacy Engineering", url: "/privacy-engineering", desc: "Privacidade em dispositivos móveis" },
