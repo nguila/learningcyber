@@ -1,6 +1,7 @@
 import {
   Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
-  Scale, Wrench, Brain, GraduationCap, Home, ChevronDown
+  Scale, Wrench, Brain, GraduationCap, Home, ChevronDown,
+  Smartphone, Wifi, Swords, Lock
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
