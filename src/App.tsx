@@ -18,6 +18,10 @@ import GRC from "./pages/GRC";
 import SecurityTools from "./pages/SecurityTools";
 import AISecurity from "./pages/AISecurity";
 import Formacoes from "./pages/Formacoes";
+import MobileSecurity from "./pages/MobileSecurity";
+import IoTSecurity from "./pages/IoTSecurity";
+import RedBlueTeam from "./pages/RedBlueTeam";
+import PrivacyEngineering from "./pages/PrivacyEngineering";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +48,10 @@ const App = () => (
             <Route path="/security-tools" element={<SecurityTools />} />
             <Route path="/ai-security" element={<AISecurity />} />
             <Route path="/formacoes" element={<Formacoes />} />
+            <Route path="/mobile-security" element={<MobileSecurity />} />
+            <Route path="/iot-security" element={<IoTSecurity />} />
+            <Route path="/red-blue-team" element={<RedBlueTeam />} />
+            <Route path="/privacy-engineering" element={<PrivacyEngineering />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
