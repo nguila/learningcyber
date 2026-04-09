@@ -97,18 +97,18 @@ export default function ZeroTrustArchitecture() {
         },
       ]}
       tools={[
-        { name: "Azure AD Conditional Access", url: "https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/" },
-        { name: "Cloudflare Access (ZTNA)", url: "https://www.cloudflare.com/products/zero-trust/access/" },
-        { name: "Google BeyondCorp", url: "https://cloud.google.com/beyondcorp" },
-        { name: "Zscaler Private Access", url: "https://www.zscaler.com/products/zscaler-private-access" },
-        { name: "CISA Zero Trust Maturity Model", url: "https://www.cisa.gov/zero-trust-maturity-model" },
-        { name: "NIST SP 800-207", url: "https://csrc.nist.gov/publications/detail/sp/800-207/final" },
+        { name: "Azure AD Conditional Access", url: "https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/", desc: "Políticas de acesso condicional da Microsoft" },
+        { name: "Cloudflare Access (ZTNA)", url: "https://www.cloudflare.com/products/zero-trust/access/", desc: "Zero Trust Network Access na cloud" },
+        { name: "Google BeyondCorp", url: "https://cloud.google.com/beyondcorp", desc: "Modelo Zero Trust da Google" },
+        { name: "Zscaler Private Access", url: "https://www.zscaler.com/products/zscaler-private-access", desc: "Plataforma ZTNA empresarial" },
+        { name: "CISA Zero Trust Maturity Model", url: "https://www.cisa.gov/zero-trust-maturity-model", desc: "Modelo de maturidade de referência" },
+        { name: "NIST SP 800-207", url: "https://csrc.nist.gov/publications/detail/sp/800-207/final", desc: "Arquitetura de referência Zero Trust" },
       ]}
       newsLinks={[
-        { title: "NIST — Zero Trust Architecture (SP 800-207)", url: "https://csrc.nist.gov/publications/detail/sp/800-207/final" },
-        { title: "CISA — Zero Trust Maturity Model", url: "https://www.cisa.gov/zero-trust-maturity-model" },
-        { title: "Google BeyondCorp Papers", url: "https://cloud.google.com/beyondcorp" },
-        { title: "The Hacker News — Zero Trust", url: "https://thehackernews.com/search/label/Zero%20Trust" },
+        { title: "NIST — Zero Trust Architecture (SP 800-207)", url: "https://csrc.nist.gov/publications/detail/sp/800-207/final", source: "NIST" },
+        { title: "CISA — Zero Trust Maturity Model", url: "https://www.cisa.gov/zero-trust-maturity-model", source: "CISA" },
+        { title: "Google BeyondCorp Papers", url: "https://cloud.google.com/beyondcorp", source: "Google" },
+        { title: "The Hacker News — Zero Trust", url: "https://thehackernews.com/search/label/Zero%20Trust", source: "The Hacker News" },
       ]}
     />
   );

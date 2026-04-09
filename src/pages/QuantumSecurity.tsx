@@ -83,17 +83,17 @@ export default function QuantumSecurity() {
         },
       ]}
       tools={[
-        { name: "Open Quantum Safe (liboqs)", url: "https://openquantumsafe.org/" },
-        { name: "NIST PQC Standards", url: "https://csrc.nist.gov/projects/post-quantum-cryptography" },
-        { name: "IBM Quantum", url: "https://quantum-computing.ibm.com/" },
-        { name: "Cloudflare PQC", url: "https://blog.cloudflare.com/post-quantum-crypto/" },
-        { name: "ANSSI — PQC Recommendations", url: "https://www.ssi.gouv.fr/en/" },
+        { name: "Open Quantum Safe (liboqs)", url: "https://openquantumsafe.org/", desc: "Biblioteca open-source de criptografia pós-quântica" },
+        { name: "NIST PQC Standards", url: "https://csrc.nist.gov/projects/post-quantum-cryptography", desc: "Padrões oficiais de criptografia pós-quântica" },
+        { name: "IBM Quantum", url: "https://quantum-computing.ibm.com/", desc: "Plataforma de computação quântica da IBM" },
+        { name: "Cloudflare PQC", url: "https://blog.cloudflare.com/post-quantum-crypto/", desc: "Implementação PQC em escala web" },
+        { name: "ANSSI — PQC Recommendations", url: "https://www.ssi.gouv.fr/en/", desc: "Recomendações da agência francesa de cibersegurança" },
       ]}
       newsLinks={[
-        { title: "NIST — Post-Quantum Cryptography", url: "https://csrc.nist.gov/projects/post-quantum-cryptography" },
-        { title: "Cloudflare Blog — Post-Quantum", url: "https://blog.cloudflare.com/tag/post-quantum/" },
-        { title: "The Quantum Insider", url: "https://thequantuminsider.com/" },
-        { title: "ENISA — Post-Quantum Cryptography", url: "https://www.enisa.europa.eu/topics/post-quantum-cryptography" },
+        { title: "NIST — Post-Quantum Cryptography", url: "https://csrc.nist.gov/projects/post-quantum-cryptography", source: "NIST" },
+        { title: "Cloudflare Blog — Post-Quantum", url: "https://blog.cloudflare.com/tag/post-quantum/", source: "Cloudflare" },
+        { title: "The Quantum Insider", url: "https://thequantuminsider.com/", source: "Quantum Insider" },
+        { title: "ENISA — Post-Quantum Cryptography", url: "https://www.enisa.europa.eu/topics/post-quantum-cryptography", source: "ENISA" },
       ]}
     />
   );

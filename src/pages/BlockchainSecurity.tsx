@@ -83,19 +83,19 @@ export default function BlockchainSecurity() {
         },
       ]}
       tools={[
-        { name: "Slither (Análise Estática)", url: "https://github.com/crytic/slither" },
-        { name: "Mythril (Análise Simbólica)", url: "https://github.com/ConsenSys/mythril" },
-        { name: "Echidna (Fuzzing)", url: "https://github.com/crytic/echidna" },
-        { name: "OpenZeppelin Contracts", url: "https://www.openzeppelin.com/contracts" },
-        { name: "Immunefi (Bug Bounties)", url: "https://immunefi.com/" },
-        { name: "Ethernaut (Prática)", url: "https://ethernaut.openzeppelin.com/" },
-        { name: "Forta Network (Monitorização)", url: "https://forta.org/" },
+        { name: "Slither (Análise Estática)", url: "https://github.com/crytic/slither", desc: "Análise estática para Solidity" },
+        { name: "Mythril (Análise Simbólica)", url: "https://github.com/ConsenSys/mythril", desc: "Deteção de vulnerabilidades via execução simbólica" },
+        { name: "Echidna (Fuzzing)", url: "https://github.com/crytic/echidna", desc: "Fuzzer para smart contracts" },
+        { name: "OpenZeppelin Contracts", url: "https://www.openzeppelin.com/contracts", desc: "Biblioteca auditada de smart contracts" },
+        { name: "Immunefi (Bug Bounties)", url: "https://immunefi.com/", desc: "Plataforma de bug bounties Web3" },
+        { name: "Ethernaut (Prática)", url: "https://ethernaut.openzeppelin.com/", desc: "Jogo de hacking para aprender segurança Solidity" },
+        { name: "Forta Network (Monitorização)", url: "https://forta.org/", desc: "Rede descentralizada de monitorização on-chain" },
       ]}
       newsLinks={[
-        { title: "Rekt News — Leaderboard de Hacks DeFi", url: "https://rekt.news/" },
-        { title: "Immunefi Blog — Web3 Security", url: "https://immunefi.com/blog/" },
-        { title: "Trail of Bits Blog", url: "https://blog.trailofbits.com/" },
-        { title: "OpenZeppelin Blog", url: "https://blog.openzeppelin.com/" },
+        { title: "Rekt News — Leaderboard de Hacks DeFi", url: "https://rekt.news/", source: "Rekt News" },
+        { title: "Immunefi Blog — Web3 Security", url: "https://immunefi.com/blog/", source: "Immunefi" },
+        { title: "Trail of Bits Blog", url: "https://blog.trailofbits.com/", source: "Trail of Bits" },
+        { title: "OpenZeppelin Blog", url: "https://blog.openzeppelin.com/", source: "OpenZeppelin" },
       ]}
     />
   );
