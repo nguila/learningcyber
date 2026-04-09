@@ -23,6 +23,9 @@ import IoTSecurity from "./pages/IoTSecurity";
 import RedBlueTeam from "./pages/RedBlueTeam";
 import PrivacyEngineering from "./pages/PrivacyEngineering";
 import SupplyChainSecurity from "./pages/SupplyChainSecurity";
+import ZeroTrustArchitecture from "./pages/ZeroTrustArchitecture";
+import QuantumSecurity from "./pages/QuantumSecurity";
+import BlockchainSecurity from "./pages/BlockchainSecurity";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +57,9 @@ const App = () => (
             <Route path="/red-blue-team" element={<RedBlueTeam />} />
             <Route path="/privacy-engineering" element={<PrivacyEngineering />} />
             <Route path="/supply-chain-security" element={<SupplyChainSecurity />} />
+            <Route path="/zero-trust" element={<ZeroTrustArchitecture />} />
+            <Route path="/quantum-security" element={<QuantumSecurity />} />
+            <Route path="/blockchain-security" element={<BlockchainSecurity />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

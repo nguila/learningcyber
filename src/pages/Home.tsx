@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import {
   Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
   Scale, Wrench, Brain, GraduationCap, BookOpen, CheckCircle2,
-  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock, Package
+  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock, Package,
+  ShieldCheck, Atom, Blocks
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -25,6 +26,9 @@ const stackBlocks = [
   { title: "Red/Blue Team", desc: "Simulação de ataque e defesa", icon: Swords, url: "/red-blue-team", color: "from-red-500/20 to-blue-500/10" },
   { title: "Privacy Engineering", desc: "Engenharia de privacidade e RGPD", icon: Lock, url: "/privacy-engineering", color: "from-fuchsia-500/20 to-pink-500/10" },
   { title: "Supply Chain Security", desc: "Proteger dependências e fornecedores", icon: Package, url: "/supply-chain-security", color: "from-amber-500/20 to-orange-500/10" },
+  { title: "Zero Trust", desc: "Modelo 'nunca confiar, sempre verificar'", icon: ShieldCheck, url: "/zero-trust", color: "from-emerald-500/20 to-teal-500/10" },
+  { title: "Quantum Security", desc: "Criptografia pós-quântica e ameaças futuras", icon: Atom, url: "/quantum-security", color: "from-violet-500/20 to-indigo-500/10" },
+  { title: "Blockchain & Web3", desc: "Segurança em smart contracts e DeFi", icon: Blocks, url: "/blockchain-security", color: "from-yellow-500/20 to-amber-500/10" },
 ];
 
 const helpCards = [

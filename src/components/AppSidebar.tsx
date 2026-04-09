@@ -1,7 +1,7 @@
 import {
   Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
   Scale, Wrench, Brain, GraduationCap, Home, ChevronDown,
-  Smartphone, Wifi, Swords, Lock, Package
+  Smartphone, Wifi, Swords, Lock, Package, ShieldCheck, Atom, Blocks
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -35,6 +35,9 @@ const stackItems = [
   { title: "Red/Blue Team", url: "/red-blue-team", icon: Swords },
   { title: "Privacy Engineering", url: "/privacy-engineering", icon: Lock },
   { title: "Supply Chain Security", url: "/supply-chain-security", icon: Package },
+  { title: "Zero Trust", url: "/zero-trust", icon: ShieldCheck },
+  { title: "Quantum Security", url: "/quantum-security", icon: Atom },
+  { title: "Blockchain & Web3", url: "/blockchain-security", icon: Blocks },
 ];
 
 const extraItems = [
