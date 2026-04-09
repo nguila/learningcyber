@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
   Scale, Wrench, Brain, GraduationCap, BookOpen, CheckCircle2,
-  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock
+  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock, Package
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -24,6 +24,7 @@ const stackBlocks = [
   { title: "IoT Security", desc: "Proteger dispositivos conectados", icon: Wifi, url: "/iot-security", color: "from-teal-500/20 to-cyan-500/10" },
   { title: "Red/Blue Team", desc: "Simulação de ataque e defesa", icon: Swords, url: "/red-blue-team", color: "from-red-500/20 to-blue-500/10" },
   { title: "Privacy Engineering", desc: "Engenharia de privacidade e RGPD", icon: Lock, url: "/privacy-engineering", color: "from-fuchsia-500/20 to-pink-500/10" },
+  { title: "Supply Chain Security", desc: "Proteger dependências e fornecedores", icon: Package, url: "/supply-chain-security", color: "from-amber-500/20 to-orange-500/10" },
 ];
 
 const helpCards = [

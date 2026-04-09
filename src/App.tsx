@@ -22,6 +22,7 @@ import MobileSecurity from "./pages/MobileSecurity";
 import IoTSecurity from "./pages/IoTSecurity";
 import RedBlueTeam from "./pages/RedBlueTeam";
 import PrivacyEngineering from "./pages/PrivacyEngineering";
+import SupplyChainSecurity from "./pages/SupplyChainSecurity";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/iot-security" element={<IoTSecurity />} />
             <Route path="/red-blue-team" element={<RedBlueTeam />} />
             <Route path="/privacy-engineering" element={<PrivacyEngineering />} />
+            <Route path="/supply-chain-security" element={<SupplyChainSecurity />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
