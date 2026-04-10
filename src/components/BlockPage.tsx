@@ -40,31 +40,6 @@ interface BlockPageProps {
   newsLinks?: NewsLink[];
 }
 
-function useProgress(pageKey: string, totalItems: number) {
-  const storageKey = `csa-progress-${pageKey}`;
-  const [completed, setCompleted] = useState<boolean[]>(() => {
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return new Array(totalItems).fill(false);
-  });
-
-  useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(completed));
-  }, [completed, storageKey]);
-
-  const toggle = (index: number) => {
-    setCompleted(prev => {
-      const next = [...prev];
-      next[index] = !next[index];
-      return next;
-    });
-  };
-
-  const count = completed.filter(Boolean).length;
-  return { completed, toggle, count };
-}
 
 export default function BlockPage({
   title, subtitle, icon: Icon, description, audience, connections, subtopics, ethicsNote,
