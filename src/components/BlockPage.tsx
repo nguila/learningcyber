@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle, ExternalLink, Wrench as WrenchIcon, Globe, Compass, Newspaper, Check } from "lucide-react";
-import { useState, useEffect } from "react";
+import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle, ExternalLink, Wrench as WrenchIcon, Globe, Compass, Newspaper } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export interface ResourceLink {
@@ -40,39 +40,12 @@ interface BlockPageProps {
   newsLinks?: NewsLink[];
 }
 
-function useProgress(pageKey: string, totalItems: number) {
-  const storageKey = `csa-progress-${pageKey}`;
-  const [completed, setCompleted] = useState<boolean[]>(() => {
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return new Array(totalItems).fill(false);
-  });
-
-  useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(completed));
-  }, [completed, storageKey]);
-
-  const toggle = (index: number) => {
-    setCompleted(prev => {
-      const next = [...prev];
-      next[index] = !next[index];
-      return next;
-    });
-  };
-
-  const count = completed.filter(Boolean).length;
-  return { completed, toggle, count };
-}
 
 export default function BlockPage({
   title, subtitle, icon: Icon, description, audience, connections, subtopics, ethicsNote,
   tools, websites, relatedAreas, newsLinks
 }: BlockPageProps) {
   const [expanded, setExpanded] = useState<number | null>(null);
-  const pageKey = title.toLowerCase().replace(/[^a-z0-9]/g, '-');
-  const { completed, toggle, count } = useProgress(pageKey, subtopics.length);
 
   return (
     <div className="min-h-screen bg-background grid-pattern">
@@ -92,21 +65,6 @@ export default function BlockPage({
             </div>
             <p className="text-muted-foreground max-w-3xl text-base leading-relaxed mb-6">{description}</p>
             
-            {/* Progress bar */}
-            <div className="mb-6 rounded-lg bg-card cyber-border p-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-semibold text-foreground">📊 Progresso</span>
-                <span className="text-sm font-mono text-primary">{count}/{subtopics.length} concluídos</span>
-              </div>
-              <div className="w-full h-2 rounded-full bg-muted overflow-hidden">
-                <motion.div
-                  className="h-full rounded-full bg-primary"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${subtopics.length > 0 ? (count / subtopics.length) * 100 : 0}%` }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-            </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-lg bg-card cyber-border p-4">
@@ -126,34 +84,24 @@ export default function BlockPage({
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-4">
         {subtopics.map((sub, i) => {
           const isOpen = expanded === i;
-          const isDone = completed[i];
           return (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              className={`rounded-xl bg-card cyber-border overflow-hidden card-hover ${isDone ? 'border-primary/30' : ''}`}
+              className="rounded-xl bg-card cyber-border overflow-hidden card-hover"
             >
-              <div className="flex items-center">
-                <button
-                  onClick={() => setExpanded(isOpen ? null : i)}
-                  className="flex-1 flex items-center gap-3 p-4 sm:p-5 text-left hover:bg-muted/30 transition-colors"
-                >
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <sub.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <span className={`flex-1 font-semibold ${isDone ? 'text-primary' : 'text-foreground'}`}>{sub.title}</span>
-                  <ChevronRight className={`h-5 w-5 text-muted-foreground transition-transform ${isOpen ? 'rotate-90' : ''}`} />
-                </button>
-                <button
-                  onClick={() => toggle(i)}
-                  className={`mr-4 p-2 rounded-lg transition-all ${isDone ? 'bg-primary/20 text-primary' : 'bg-muted/30 text-muted-foreground hover:bg-muted/50'}`}
-                  title={isDone ? 'Marcar como não concluído' : 'Marcar como concluído'}
-                >
-                  <Check className="h-4 w-4" />
-                </button>
-              </div>
+              <button
+                onClick={() => setExpanded(isOpen ? null : i)}
+                className="w-full flex items-center gap-3 p-4 sm:p-5 text-left hover:bg-muted/30 transition-colors"
+              >
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <sub.icon className="h-5 w-5 text-primary" />
+                </div>
+                <span className="flex-1 font-semibold text-foreground">{sub.title}</span>
+                <ChevronRight className={`h-5 w-5 text-muted-foreground transition-transform ${isOpen ? 'rotate-90' : ''}`} />
+              </button>
 
               {isOpen && (
                 <motion.div
