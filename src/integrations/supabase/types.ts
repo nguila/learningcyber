@@ -14,7 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pages: {
+        Row: {
+          audience: string
+          connections: string
+          created_at: string
+          description: string
+          ethics_note: string | null
+          icon_name: string
+          id: string
+          news_links: Json | null
+          related_areas: Json | null
+          slug: string
+          subtitle: string
+          subtopics: Json
+          title: string
+          tools: Json | null
+          updated_at: string
+          websites: Json | null
+        }
+        Insert: {
+          audience: string
+          connections: string
+          created_at?: string
+          description: string
+          ethics_note?: string | null
+          icon_name: string
+          id?: string
+          news_links?: Json | null
+          related_areas?: Json | null
+          slug: string
+          subtitle: string
+          subtopics?: Json
+          title: string
+          tools?: Json | null
+          updated_at?: string
+          websites?: Json | null
+        }
+        Update: {
+          audience?: string
+          connections?: string
+          created_at?: string
+          description?: string
+          ethics_note?: string | null
+          icon_name?: string
+          id?: string
+          news_links?: Json | null
+          related_areas?: Json | null
+          slug?: string
+          subtitle?: string
+          subtopics?: Json
+          title?: string
+          tools?: Json | null
+          updated_at?: string
+          websites?: Json | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
