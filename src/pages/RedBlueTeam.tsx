@@ -1,44 +1,5 @@
-import BlockPage from "@/components/BlockPage";
-import { Swords, Shield, Users, Target, Flag } from "lucide-react";
+import DatabasePage from "@/components/DatabasePage";
 
 export default function RedBlueTeam() {
-  return (
-    <BlockPage
-      title="Red Team / Blue Team"
-      subtitle="Simulações realistas de ataque e defesa"
-      icon={Swords}
-      description="Red Team (ataque) e Blue Team (defesa) são exercícios onde equipas simulam cenários reais de ciberataque. O Red Team tenta comprometer a organização usando técnicas reais, enquanto o Blue Team tenta detetar e responder. O Purple Team combina ambos para maximizar a aprendizagem. É o treino mais realista em cibersegurança."
-      audience="Profissionais de segurança ofensiva e defensiva, gestores de segurança, equipas SOC e qualquer pessoa interessada em perceber como funcionam simulações de ataque reais."
-      connections="Integra Pentesting (técnicas ofensivas), SOC (deteção e resposta), Threat Intelligence (simulação de atacantes reais) e Digital Forensics (investigação pós-exercício)."
-      subtopics={[
-        { title: "Red Team Operations", icon: Target, explanation: "O Red Team simula atacantes reais — não se limita a explorar vulnerabilidades técnicas, mas também usa engenharia social, acesso físico e técnicas avançadas de evasão. O objetivo é testar toda a cadeia de segurança: pessoas, processos e tecnologia. Ao contrário de um pentest focado, o Red Team tem um objetivo específico (ex.: aceder ao servidor de RH) e liberdade para usar qualquer caminho.", importance: "Um pentest testa vulnerabilidades; um Red Team testa a capacidade real da organização de se defender contra um atacante motivado e sofisticado.", realExample: "Num exercício Red Team, a equipa enviou um email de phishing a um funcionário, obteve acesso ao seu computador, escalou privilégios via uma vulnerabilidade não corrigida, moveu-se lateralmente até ao servidor de RH e extraiu dados salariais — tudo em 72 horas, sem ser detetada pelo Blue Team.", practicalTask: "Exercício mental: se fosses um Red Team a atacar a tua própria empresa (ou escola), por onde começarias? Que informação pública encontrarias? Quem seria mais vulnerável a phishing? Que sistemas são mais valiosos? Este raciocínio é a base do planeamento Red Team.", bestPractices: ["Define objetivos claros e realistas para cada exercício.", "Documenta todo o percurso de ataque detalhadamente.", "Simula TTPs (Tactics, Techniques and Procedures) de atacantes reais.", "Coordena com a gestão — Red Team nunca é sem autorização."] },
-        { title: "Blue Team Defense", icon: Shield, explanation: "O Blue Team é a equipa de defesa — monitoriza, deteta e responde a ameaças. Durante exercícios, o Blue Team não sabe quando ou como o Red Team vai atacar. O objetivo é testar a eficácia das defesas reais: os alertas disparam? A equipa reage a tempo? Os processos de resposta funcionam?", importance: "Ter ferramentas de segurança não basta — é preciso saber usá-las sob pressão real. Exercícios Blue Team revelam lacunas em deteção, comunicação e resposta.", realExample: "Num exercício, o Blue Team detetou atividade suspeita (login fora de hora) mas classificou-o como falso positivo porque o utilizador 'costumava trabalhar tarde'. Na realidade, era o Red Team usando credenciais roubadas. O exercício revelou a necessidade de melhorar critérios de triagem.", practicalTask: "Imagina que recebes um alerta: 'Transferência de 2 GB para serviço cloud externo às 23h por um utilizador do departamento financeiro'. Como investigarias? Que perguntas farias? Que logs consultarias? Este raciocínio é o dia a dia do Blue Team.", bestPractices: ["Pratica cenários regularmente — a prática melhora tempos de resposta.", "Documenta playbooks de resposta para cenários comuns.", "Revê alertas não investigados — podem esconder ataques reais.", "Usa threat intelligence para antecipar técnicas de ataque."] },
-        { title: "Purple Team", icon: Users, explanation: "O Purple Team não é uma terceira equipa — é a colaboração entre Red e Blue. Em vez de trabalhar em oposição, ambas as equipas partilham informação em tempo real: o Red Team mostra as técnicas usadas, o Blue Team verifica se as detetou e ajusta defesas. O resultado é aprendizagem máxima para ambos.", importance: "Exercícios puramente adversariais podem ser frustrantes se o Blue Team nunca deteta nada. O Purple Team garante que cada técnica testada leva a melhorias concretas nas defesas.", realExample: "Num exercício Purple Team, o Red Team tentou exfiltrar dados via DNS tunneling. O Blue Team não tinha regras para detetar este tipo de tráfego. Em colaboração, criaram alertas específicos e testaram-nos em tempo real. No dia seguinte, a organização tinha uma nova capacidade de deteção.", practicalTask: "Pensa em algo que fazes para te proteger online (ex.: MFA no email). Agora pensa como um atacante: como contornarias essa proteção? (ex.: SIM swapping, phishing de token MFA). Finalmente, como te defenderias desse contorno? Este ciclo ataque→defesa→melhoria é a essência do Purple Team.", bestPractices: ["Combina exercícios Red/Blue com sessões Purple para maximizar aprendizagem.", "Documenta cada técnica testada e o resultado de deteção.", "Usa o MITRE ATT&CK como framework para organizar testes.", "Prioriza melhorias baseadas nos gaps encontrados."] },
-        { title: "Capture The Flag (CTF)", icon: Flag, explanation: "CTFs são competições de cibersegurança onde participantes resolvem desafios técnicos para encontrar 'flags' (códigos secretos). Existem dois formatos: Jeopardy (desafios independentes por categoria — web, crypto, forensics, reverse engineering) e Attack-Defense (equipas atacam e defendem sistemas em simultâneo). São a forma mais divertida de aprender segurança.", importance: "CTFs desenvolvem competências práticas em ambiente seguro e legal. Muitos profissionais de segurança começaram em CTFs e empresas usam-nos para recrutar talento.", realExample: "A competição DEF CON CTF é considerada a 'Olímpiada' da cibersegurança. Equipas de todo o mundo competem para explorar vulnerabilidades em tempo real. Muitos participantes são depois recrutados por empresas de segurança e agências governamentais.", practicalTask: "Cria uma conta gratuita em picoCTF (picoctf.org) ou TryHackMe (tryhackme.com) e experimenta resolver os primeiros desafios de nível iniciante. Não precisas de saber programar para começar — muitos desafios ensinam conceitos à medida que jogas.", bestPractices: ["Começa por CTFs de nível iniciante (picoCTF, TryHackMe).", "Participa em equipas — a colaboração acelera a aprendizagem.", "Escreve write-ups dos desafios resolvidos para consolidar o conhecimento.", "Progride gradualmente para plataformas mais avançadas (HTB, CTFtime)."] },
-      ]}
-      tools={[
-        { name: "Atomic Red Team", url: "https://atomicredteam.io", desc: "Testes automatizados de técnicas ATT&CK" },
-        { name: "Caldera", url: "https://caldera.mitre.org", desc: "Plataforma MITRE de simulação de adversários" },
-        { name: "Infection Monkey", url: "https://www.guardicore.com/infectionmonkey", desc: "Simulação de ataques laterais automatizada" },
-      ]}
-      websites={[
-        { name: "CTFtime", url: "https://ctftime.org", desc: "Calendário global de competições CTF" },
-        { name: "TryHackMe", url: "https://tryhackme.com", desc: "Plataforma de aprendizagem guiada" },
-        { name: "Hack The Box", url: "https://www.hackthebox.com", desc: "Desafios práticos de segurança" },
-        { name: "SANS Purple Team", url: "https://www.sans.org/purple-team", desc: "Recursos e formação Purple Team" },
-      ]}
-      newsLinks={[
-        { title: "Red Canary Blog — Deteção de ameaças", url: "https://redcanary.com/blog/", source: "Red Canary" },
-        { title: "SpecterOps Blog — Red Team research", url: "https://posts.specterops.io/", source: "SpecterOps" },
-        { title: "CTFtime — Competições ativas", url: "https://ctftime.org/", source: "CTFtime" },
-        { title: "MITRE ATT&CK Blog", url: "https://medium.com/mitre-attack", source: "MITRE" },
-      ]}
-      relatedAreas={[
-        { title: "Pentesting", url: "/pentesting", desc: "Testes de segurança ofensivos" },
-        { title: "SOC", url: "/soc", desc: "Operações de defesa" },
-        { title: "Threat Intelligence", url: "/threat-intelligence", desc: "Inteligência sobre atacantes" },
-      ]}
-      ethicsNote="Exercícios Red Team devem SEMPRE ser autorizados pela gestão da organização, com âmbito definido e regras de engagement claras. CTFs e plataformas de treino são ambientes seguros e legais para praticar. Nunca apliques técnicas ofensivas sem autorização explícita."
-    />
-  );
+  return <DatabasePage slug="red-blue-team" />;
 }
