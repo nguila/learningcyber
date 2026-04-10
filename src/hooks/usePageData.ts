@@ -45,10 +45,10 @@ export function usePageData(slug: string) {
         connections: data.connections,
         subtopics,
         ethicsNote: data.ethics_note ?? undefined,
-        tools: (data.tools as ResourceLink[] | null) ?? undefined,
-        websites: (data.websites as ResourceLink[] | null) ?? undefined,
-        relatedAreas: (data.related_areas as any[] | null) ?? undefined,
-        newsLinks: (data.news_links as NewsLink[] | null) ?? undefined,
+        tools: (data.tools as unknown as ResourceLink[] | null) ?? undefined,
+        websites: (data.websites as unknown as ResourceLink[] | null) ?? undefined,
+        relatedAreas: (data.related_areas as unknown as any[] | null) ?? undefined,
+        newsLinks: (data.news_links as unknown as NewsLink[] | null) ?? undefined,
       };
     },
   });
