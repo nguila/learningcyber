@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle, ExternalLink, Wrench as WrenchIcon, Globe, Compass, Newspaper, Check } from "lucide-react";
-import { useState, useEffect } from "react";
+import { LucideIcon, ChevronRight, CheckCircle2, Lightbulb, BookOpen, AlertTriangle, ExternalLink, Wrench as WrenchIcon, Globe, Compass, Newspaper } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export interface ResourceLink {
