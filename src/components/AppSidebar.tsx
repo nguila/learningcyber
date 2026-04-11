@@ -1,7 +1,11 @@
 import {
-  Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
-  Scale, Wrench, Brain, GraduationCap, Home, ChevronDown,
-  Smartphone, Wifi, Swords, Lock, Package, ShieldCheck, Atom, Blocks
+  Shield, Network, AppWindow, Cloud, Smartphone, Lock, ShieldAlert,
+  UserCheck, Monitor, AlertCircle, Eye, Server, BarChart3, Target,
+  Bug, Users, Search, Code, Globe, Wifi, Home as HomeIcon,
+  TrendingUp, ClipboardCheck, Scale, Layers, FileText, RotateCcw,
+  ShieldCheck, Package, Factory, Crosshair, MessageSquare, ScanEye,
+  Award, FileBarChart, KeyRound, Swords, Settings, Atom, Blocks,
+  ChevronDown,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -12,43 +16,63 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
+import { Home } from "lucide-react";
 
 const mainItems = [
   { title: "Início", url: "/", icon: Home },
 ];
 
 const stackItems = [
-  { title: "Foundations", url: "/foundations", icon: Shield },
-  { title: "SOC", url: "/soc", icon: Server },
-  { title: "Threat Intelligence", url: "/threat-intelligence", icon: Eye },
-  { title: "Vulnerability Mgmt", url: "/vulnerability-management", icon: Bug },
-  { title: "Web & API Security", url: "/web-api-security", icon: Globe },
-  { title: "Pentesting", url: "/pentesting", icon: Target },
+  { title: "Network Security", url: "/network-security", icon: Network },
+  { title: "Application Security", url: "/application-security", icon: AppWindow },
   { title: "Cloud Security", url: "/cloud-security", icon: Cloud },
-  { title: "DevSecOps", url: "/devsecops", icon: Code },
-  { title: "Digital Forensics", url: "/digital-forensics", icon: Search },
-  { title: "GRC", url: "/grc", icon: Scale },
-  { title: "Security Tools", url: "/security-tools", icon: Wrench },
-  { title: "AI Security", url: "/ai-security", icon: Brain },
   { title: "Mobile Security", url: "/mobile-security", icon: Smartphone },
-  { title: "IoT Security", url: "/iot-security", icon: Wifi },
-  { title: "Red/Blue Team", url: "/red-blue-team", icon: Swords },
-  { title: "Privacy Engineering", url: "/privacy-engineering", icon: Lock },
-  { title: "Supply Chain Security", url: "/supply-chain-security", icon: Package },
+  { title: "Cryptography", url: "/cryptography", icon: Lock },
+  { title: "Data Loss Prevention", url: "/data-loss-prevention", icon: ShieldAlert },
+  { title: "IAM", url: "/iam", icon: UserCheck },
+  { title: "Endpoint Security", url: "/endpoint-security", icon: Monitor },
+  { title: "Incident Response", url: "/incident-response", icon: AlertCircle },
+  { title: "Threat Intelligence", url: "/threat-intelligence", icon: Eye },
+  { title: "SOC", url: "/soc", icon: Server },
+  { title: "SIEM", url: "/siem", icon: BarChart3 },
+  { title: "Penetration Testing", url: "/pentesting", icon: Target },
+  { title: "Vulnerability Mgmt", url: "/vulnerability-management", icon: Bug },
+  { title: "Security Awareness", url: "/security-awareness-training", icon: Users },
+  { title: "Forensics Analysis", url: "/forensics-analysis", icon: Search },
+  { title: "Secure Coding", url: "/secure-coding", icon: Code },
+  { title: "Web Security", url: "/web-api-security", icon: Globe },
+  { title: "Wireless Security", url: "/wireless-security", icon: Wifi },
+  { title: "Physical Security", url: "/physical-security", icon: HomeIcon },
+  { title: "Risk Management", url: "/risk-management", icon: TrendingUp },
+  { title: "Compliance Mgmt", url: "/compliance-management", icon: ClipboardCheck },
+  { title: "GRC", url: "/grc", icon: Scale },
+  { title: "Security Architecture", url: "/security-architecture", icon: Layers },
+  { title: "Security Policy", url: "/security-policy", icon: FileText },
+  { title: "Disaster Recovery", url: "/disaster-recovery", icon: RotateCcw },
   { title: "Zero Trust", url: "/zero-trust", icon: ShieldCheck },
-  { title: "Quantum Security", url: "/quantum-security", icon: Atom },
-  { title: "Blockchain & Web3", url: "/blockchain-security", icon: Blocks },
-];
-
-const extraItems = [
-  { title: "Formações", url: "/formacoes", icon: GraduationCap },
+  { title: "Insider Threat", url: "/insider-threat", icon: Eye },
+  { title: "Supply Chain Security", url: "/supply-chain-security", icon: Package },
+  { title: "ICS Security", url: "/ics-security", icon: Factory },
+  { title: "IoT Security", url: "/iot-security", icon: Wifi },
+  { title: "Data Privacy", url: "/data-privacy", icon: Lock },
+  { title: "Digital Forensics", url: "/digital-forensics", icon: Search },
+  { title: "Malware Analysis", url: "/malware-analysis", icon: Bug },
+  { title: "Social Engineering", url: "/social-engineering", icon: MessageSquare },
+  { title: "Threat Hunting", url: "/threat-hunting", icon: Crosshair },
+  { title: "Blockchain Security", url: "/blockchain-security", icon: Blocks },
+  { title: "Dark Web Monitoring", url: "/dark-web-monitoring", icon: ScanEye },
+  { title: "Security Training", url: "/security-training", icon: Award },
+  { title: "Security Metrics", url: "/security-metrics", icon: FileBarChart },
+  { title: "Password Mgmt", url: "/password-management", icon: KeyRound },
+  { title: "Red/Blue Team", url: "/red-blue-team", icon: Swords },
+  { title: "Security Automation", url: "/security-automation", icon: Settings },
+  { title: "Quantum Cryptography", url: "/quantum-security", icon: Atom },
 ];
 
 export function AppSidebar() {
   const { state, isMobile, setOpenMobile } = useSidebar();
   const collapsed = state === "collapsed";
   const location = useLocation();
-  const isActive = (path: string) => location.pathname === path;
   const [stackOpen, setStackOpen] = useState(true);
 
   const handleNavClick = () => {
@@ -113,12 +137,6 @@ export function AppSidebar() {
               <SidebarMenu>{stackItems.map(renderItem)}</SidebarMenu>
             </SidebarGroupContent>
           )}
-        </SidebarGroup>
-
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>{extraItems.map(renderItem)}</SidebarMenu>
-          </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
