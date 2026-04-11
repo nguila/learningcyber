@@ -1,34 +1,61 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Shield, Server, Eye, Bug, Globe, Target, Cloud, Code, Search,
-  Scale, Wrench, Brain, GraduationCap, BookOpen, CheckCircle2,
-  Lightbulb, ArrowRight, Zap, Smartphone, Wifi, Swords, Lock, Package,
-  ShieldCheck, Atom, Blocks
+  Shield, Network, AppWindow, Cloud, Smartphone, Lock, ShieldAlert,
+  UserCheck, Monitor, AlertCircle, Eye, Server, BarChart3, Target,
+  Bug, Users, Search, Code, Globe, Wifi, Home as HomeIcon,
+  TrendingUp, ClipboardCheck, Scale, Layers, FileText, RotateCcw,
+  ShieldCheck, Package, Factory, Crosshair, MessageSquare, ScanEye,
+  Award, FileBarChart, KeyRound, Swords, Settings, Atom, Blocks,
+  ArrowRight, BookOpen, Lightbulb, Zap, GraduationCap,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stackBlocks = [
-  { title: "Foundations", desc: "Redes, SO, criptografia e princípios base", icon: Shield, url: "/foundations", color: "from-cyan-500/20 to-blue-500/10" },
-  { title: "SOC", desc: "Monitorização, deteção e resposta a incidentes", icon: Server, url: "/soc", color: "from-blue-500/20 to-indigo-500/10" },
-  { title: "Threat Intelligence", desc: "Compreender atacantes e as suas técnicas", icon: Eye, url: "/threat-intelligence", color: "from-purple-500/20 to-blue-500/10" },
-  { title: "Vulnerability Mgmt", desc: "Encontrar e corrigir fragilidades", icon: Bug, url: "/vulnerability-management", color: "from-orange-500/20 to-red-500/10" },
-  { title: "Web & API Security", desc: "Proteger sites e APIs do dia a dia", icon: Globe, url: "/web-api-security", color: "from-green-500/20 to-cyan-500/10" },
-  { title: "Pentesting", desc: "Testes de segurança autorizados", icon: Target, url: "/pentesting", color: "from-red-500/20 to-orange-500/10" },
+  { title: "Network Security", desc: "Proteger infraestruturas de rede", icon: Network, url: "/network-security", color: "from-cyan-500/20 to-blue-500/10" },
+  { title: "Application Security", desc: "Segurança no ciclo de vida das aplicações", icon: AppWindow, url: "/application-security", color: "from-blue-500/20 to-indigo-500/10" },
   { title: "Cloud Security", desc: "Segurança em AWS, Azure e GCP", icon: Cloud, url: "/cloud-security", color: "from-sky-500/20 to-blue-500/10" },
-  { title: "DevSecOps", desc: "Segurança integrada no desenvolvimento", icon: Code, url: "/devsecops", color: "from-emerald-500/20 to-green-500/10" },
-  { title: "Digital Forensics", desc: "Investigação pós-incidente", icon: Search, url: "/digital-forensics", color: "from-amber-500/20 to-yellow-500/10" },
-  { title: "GRC", desc: "Governança, risco e conformidade", icon: Scale, url: "/grc", color: "from-indigo-500/20 to-purple-500/10" },
-  { title: "Security Tools", desc: "Ferramentas essenciais da área", icon: Wrench, url: "/security-tools", color: "from-slate-500/20 to-gray-500/10" },
-  { title: "AI Security", desc: "Proteger sistemas com IA/LLM", icon: Brain, url: "/ai-security", color: "from-pink-500/20 to-rose-500/10" },
   { title: "Mobile Security", desc: "Segurança em apps e dispositivos móveis", icon: Smartphone, url: "/mobile-security", color: "from-violet-500/20 to-purple-500/10" },
-  { title: "IoT Security", desc: "Proteger dispositivos conectados", icon: Wifi, url: "/iot-security", color: "from-teal-500/20 to-cyan-500/10" },
-  { title: "Red/Blue Team", desc: "Simulação de ataque e defesa", icon: Swords, url: "/red-blue-team", color: "from-red-500/20 to-blue-500/10" },
-  { title: "Privacy Engineering", desc: "Engenharia de privacidade e RGPD", icon: Lock, url: "/privacy-engineering", color: "from-fuchsia-500/20 to-pink-500/10" },
+  { title: "Cryptography", desc: "Ciência da proteção da informação", icon: Lock, url: "/cryptography", color: "from-emerald-500/20 to-green-500/10" },
+  { title: "Data Loss Prevention", desc: "Prevenir fugas de dados sensíveis", icon: ShieldAlert, url: "/data-loss-prevention", color: "from-red-500/20 to-orange-500/10" },
+  { title: "IAM", desc: "Gestão de identidades e acessos", icon: UserCheck, url: "/iam", color: "from-indigo-500/20 to-purple-500/10" },
+  { title: "Endpoint Security", desc: "Proteger dispositivos finais", icon: Monitor, url: "/endpoint-security", color: "from-slate-500/20 to-gray-500/10" },
+  { title: "Incident Response", desc: "Resposta e gestão de incidentes", icon: AlertCircle, url: "/incident-response", color: "from-orange-500/20 to-red-500/10" },
+  { title: "Threat Intelligence", desc: "Compreender atacantes e técnicas", icon: Eye, url: "/threat-intelligence", color: "from-purple-500/20 to-blue-500/10" },
+  { title: "SOC", desc: "Monitorização e resposta a incidentes", icon: Server, url: "/soc", color: "from-blue-500/20 to-indigo-500/10" },
+  { title: "SIEM", desc: "Monitorização centralizada de segurança", icon: BarChart3, url: "/siem", color: "from-teal-500/20 to-cyan-500/10" },
+  { title: "Penetration Testing", desc: "Testes de segurança autorizados", icon: Target, url: "/pentesting", color: "from-red-500/20 to-orange-500/10" },
+  { title: "Vulnerability Mgmt", desc: "Encontrar e corrigir fragilidades", icon: Bug, url: "/vulnerability-management", color: "from-orange-500/20 to-red-500/10" },
+  { title: "Security Awareness", desc: "Formação e consciencialização", icon: Users, url: "/security-awareness-training", color: "from-green-500/20 to-cyan-500/10" },
+  { title: "Forensics Analysis", desc: "Análise forense de evidências", icon: Search, url: "/forensics-analysis", color: "from-amber-500/20 to-yellow-500/10" },
+  { title: "Secure Coding", desc: "Desenvolvimento de código seguro", icon: Code, url: "/secure-coding", color: "from-emerald-500/20 to-green-500/10" },
+  { title: "Web Security", desc: "Proteger aplicações e serviços web", icon: Globe, url: "/web-api-security", color: "from-green-500/20 to-cyan-500/10" },
+  { title: "Wireless Security", desc: "Segurança em redes sem fios", icon: Wifi, url: "/wireless-security", color: "from-cyan-500/20 to-blue-500/10" },
+  { title: "Physical Security", desc: "Segurança física de instalações", icon: HomeIcon, url: "/physical-security", color: "from-stone-500/20 to-gray-500/10" },
+  { title: "Risk Management", desc: "Gestão e avaliação de riscos", icon: TrendingUp, url: "/risk-management", color: "from-yellow-500/20 to-amber-500/10" },
+  { title: "Compliance Mgmt", desc: "Gestão de conformidade regulatória", icon: ClipboardCheck, url: "/compliance-management", color: "from-indigo-500/20 to-purple-500/10" },
+  { title: "GRC", desc: "Governança, risco e conformidade", icon: Scale, url: "/grc", color: "from-indigo-500/20 to-purple-500/10" },
+  { title: "Security Architecture", desc: "Arquitetura de segurança empresarial", icon: Layers, url: "/security-architecture", color: "from-blue-500/20 to-indigo-500/10" },
+  { title: "Security Policy", desc: "Políticas e procedimentos", icon: FileText, url: "/security-policy", color: "from-gray-500/20 to-slate-500/10" },
+  { title: "Disaster Recovery", desc: "Recuperação e continuidade", icon: RotateCcw, url: "/disaster-recovery", color: "from-orange-500/20 to-red-500/10" },
+  { title: "Zero Trust", desc: "Nunca confiar, sempre verificar", icon: ShieldCheck, url: "/zero-trust", color: "from-emerald-500/20 to-teal-500/10" },
+  { title: "Insider Threat", desc: "Gestão de ameaças internas", icon: Eye, url: "/insider-threat", color: "from-red-500/20 to-pink-500/10" },
   { title: "Supply Chain Security", desc: "Proteger dependências e fornecedores", icon: Package, url: "/supply-chain-security", color: "from-amber-500/20 to-orange-500/10" },
-  { title: "Zero Trust", desc: "Modelo 'nunca confiar, sempre verificar'", icon: ShieldCheck, url: "/zero-trust", color: "from-emerald-500/20 to-teal-500/10" },
-  { title: "Quantum Security", desc: "Criptografia pós-quântica e ameaças futuras", icon: Atom, url: "/quantum-security", color: "from-violet-500/20 to-indigo-500/10" },
-  { title: "Blockchain & Web3", desc: "Segurança em smart contracts e DeFi", icon: Blocks, url: "/blockchain-security", color: "from-yellow-500/20 to-amber-500/10" },
+  { title: "ICS Security", desc: "Segurança de sistemas industriais", icon: Factory, url: "/ics-security", color: "from-stone-500/20 to-gray-500/10" },
+  { title: "IoT Security", desc: "Proteger dispositivos conectados", icon: Wifi, url: "/iot-security", color: "from-teal-500/20 to-cyan-500/10" },
+  { title: "Data Privacy", desc: "Privacidade e proteção de dados", icon: Lock, url: "/data-privacy", color: "from-fuchsia-500/20 to-pink-500/10" },
+  { title: "Digital Forensics", desc: "Investigação pós-incidente", icon: Search, url: "/digital-forensics", color: "from-amber-500/20 to-yellow-500/10" },
+  { title: "Malware Analysis", desc: "Análise e reverse engineering", icon: Bug, url: "/malware-analysis", color: "from-red-500/20 to-rose-500/10" },
+  { title: "Social Engineering", desc: "Engenharia social e manipulação", icon: MessageSquare, url: "/social-engineering", color: "from-pink-500/20 to-rose-500/10" },
+  { title: "Threat Hunting", desc: "Caça proativa de ameaças", icon: Crosshair, url: "/threat-hunting", color: "from-purple-500/20 to-violet-500/10" },
+  { title: "Blockchain Security", desc: "Segurança em smart contracts e DeFi", icon: Blocks, url: "/blockchain-security", color: "from-yellow-500/20 to-amber-500/10" },
+  { title: "Dark Web Monitoring", desc: "Monitorização da dark web", icon: ScanEye, url: "/dark-web-monitoring", color: "from-gray-500/20 to-slate-500/10" },
+  { title: "Security Training", desc: "Formações e certificações", icon: Award, url: "/security-training", color: "from-green-500/20 to-emerald-500/10" },
+  { title: "Security Metrics", desc: "Métricas e relatórios de segurança", icon: FileBarChart, url: "/security-metrics", color: "from-blue-500/20 to-cyan-500/10" },
+  { title: "Password Mgmt", desc: "Gestão segura de credenciais", icon: KeyRound, url: "/password-management", color: "from-violet-500/20 to-purple-500/10" },
+  { title: "Red/Blue Team", desc: "Simulação de ataque e defesa", icon: Swords, url: "/red-blue-team", color: "from-red-500/20 to-blue-500/10" },
+  { title: "Security Automation", desc: "Automação de processos", icon: Settings, url: "/security-automation", color: "from-cyan-500/20 to-teal-500/10" },
+  { title: "Quantum Cryptography", desc: "Criptografia pós-quântica", icon: Atom, url: "/quantum-security", color: "from-violet-500/20 to-indigo-500/10" },
 ];
 
 const helpCards = [
@@ -36,13 +63,6 @@ const helpCards = [
   { icon: Lightbulb, title: "Exemplos Práticos", desc: "Tarefas, checklists e cenários que podes testar no teu computador." },
   { icon: Zap, title: "Casos Reais", desc: "Histórias de incidentes reais para perceberes o impacto da cibersegurança." },
   { icon: GraduationCap, title: "Percurso de Aprendizagem", desc: "Cursos recomendados e sugestões de formação para cada nível." },
-];
-
-const progressSteps = [
-  "Fundamentos",
-  "Proteção Pessoal",
-  "Proteção de Empresas",
-  "Especialização Técnica",
 ];
 
 export default function Home() {
@@ -72,10 +92,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/foundations"
+                to="/network-security"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
               >
-                Começar pelos fundamentos
+                Começar a explorar
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
@@ -89,25 +109,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Progress Line */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex items-center justify-between gap-1 sm:gap-2">
-          {progressSteps.map((step, i) => (
-            <div key={step} className="flex items-center gap-1 sm:gap-2 flex-1">
-              <div className="flex flex-col items-center text-center flex-1">
-                <div className="w-8 h-8 rounded-full bg-primary/10 cyber-border flex items-center justify-center mb-1.5">
-                  <span className="font-mono text-xs text-primary font-bold">{i + 1}</span>
-                </div>
-                <span className="text-xs text-muted-foreground font-medium leading-tight">{step}</span>
-              </div>
-              {i < progressSteps.length - 1 && (
-                <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-primary/10 mt-[-16px]" />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Stack Map */}
       <div id="stack-map" className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         <motion.div
@@ -117,7 +118,7 @@ export default function Home() {
           className="text-center mb-8"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Mapa da Cybersecurity Stack</h2>
-          <p className="text-muted-foreground">Explora cada área ao teu ritmo</p>
+          <p className="text-muted-foreground">Explora cada área ao teu ritmo — {stackBlocks.length} módulos disponíveis</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -127,7 +128,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.04 }}
+              transition={{ delay: i * 0.02 }}
             >
               <Link
                 to={block.url}
@@ -147,30 +148,6 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-
-        {/* Formações link */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-4"
-        >
-          <Link
-            to="/formacoes"
-            className="block rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 p-5 cyber-border card-hover group"
-          >
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-card/50">
-                <GraduationCap className="h-5 w-5 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">Formações & Cursos Recomendados</h3>
-                <p className="text-sm text-muted-foreground mt-1">Percurso de aprendizagem organizado por nível e área</p>
-              </div>
-              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-            </div>
-          </Link>
-        </motion.div>
       </div>
 
       {/* Help Cards */}
