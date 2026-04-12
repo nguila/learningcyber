@@ -19,6 +19,7 @@ import {
   Atom, Binary, FlaskConical,
   Blocks, Wallet,
   ScrollText, FileCheck, AlertTriangle,
+  GraduationCap,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,6 +44,7 @@ const iconMap: Record<string, LucideIcon> = {
   Atom, Binary, FlaskConical,
   Blocks, Wallet,
   ScrollText, FileCheck, AlertTriangle,
+  GraduationCap,
 };
 
 export function getIcon(name: string): LucideIcon {
